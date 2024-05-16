@@ -1,17 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TheHeader />
+  <!-- <TesteFor /> -->
+  <!-- <TesteFormulario /> -->
+  <!-- <TheEventos /> -->
+  <!-- <TheComputed /> -->
+  <!-- <TheWatch /> -->
+  <LifeCycle />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from "./components/TheHeader.vue";
+// import TesteFor from "./components/TesteFor.vue";
+// import TesteFormulario from "./components/TesteFormulario.vue";
+// import TheEventos from "./components/TheEventos.vue";
+// import TheComputed from "./components/TheComputed.vue";
+// import TheWatch from "./components/TheWatch.vue";
+import LifeCycle from "./components/LifeCycle.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TheHeader,
+    // TesteFor,
+    // TesteFormulario,
+    // TheEventos,
+    // TheComputed,
+    // TheWatch,
+    LifeCycle,
+  },
+
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style>
