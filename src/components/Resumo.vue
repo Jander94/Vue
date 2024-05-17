@@ -47,6 +47,36 @@ export default {
       deep: true,
     },
   },
+
+  // -------------- HOOKS ---------------//
+
+  // Detalhes no componente: LifeCycle.vue
+
+  // Antes do componente ser criado.
+  // Não tem acesso ao estado
+  // Não tem acesso ao template (DOM)
+  beforeCreate() {},
+
+  // O componente foi criado.
+  // Tem acesso ao estado
+  // Não tem acesso ao template (DOM)
+  created() {},
+
+  // Antes do componente ser montado.
+  // Tem acesso ao estado
+  // Não tem acesso ao template (DOM)
+  beforeMount() {},
+
+  // O componente foi montado.
+  // Tem acesso ao estado
+  // Tem acesso ao template (DOM)
+  mounted() {},
+
+  // Antes do componente ser desmontado.
+  beforeUnmount() {},
+
+  // O componente foi desmontado.
+  unmounted() {},
 };
 </script>
 
