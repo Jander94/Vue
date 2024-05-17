@@ -1,36 +1,50 @@
 <template>
-  <TheHeader />
   <!-- <TesteFor /> -->
   <!-- <TesteFormulario /> -->
   <!-- <TheEventos /> -->
   <!-- <TheComputed /> -->
   <!-- <TheWatch /> -->
-  <LifeCycle />
+  <!-- <LifeCycle /> -->
+
+  <TheSlot>
+    <template v-slot:title> Slots </template>
+    <template v-slot:description>
+      <div v-html="descriptionSlots"></div>
+    </template>
+    slot default
+  </TheSlot>
 </template>
 
 <script>
-import TheHeader from "./components/TheHeader.vue";
 // import TesteFor from "./components/TesteFor.vue";
 // import TesteFormulario from "./components/TesteFormulario.vue";
 // import TheEventos from "./components/TheEventos.vue";
 // import TheComputed from "./components/TheComputed.vue";
 // import TheWatch from "./components/TheWatch.vue";
-import LifeCycle from "./components/LifeCycle.vue";
+// import LifeCycle from "./components/LifeCycle.vue";
+import TheSlot from "./components/TheSlot.vue";
+import { descriptionSlots } from "./utils/index";
 
 export default {
   name: "App",
   components: {
-    TheHeader,
     // TesteFor,
     // TesteFormulario,
     // TheEventos,
     // TheComputed,
     // TheWatch,
-    LifeCycle,
+    // LifeCycle,
+    TheSlot,
   },
 
   data() {
-    return {};
+    return {
+      descriptionSlots,
+    };
+  },
+
+  mounted() {
+    // console.log(this.$el);
   },
 };
 </script>
