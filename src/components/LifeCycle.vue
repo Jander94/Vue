@@ -32,24 +32,32 @@ export default {
   // HOOKS:
   beforeCreate() {
     // Antes do componente ser criado.
+    // Não tem acesso ao estado
+    // Não tem acesso ao template (DOM)
     console.log("beforeCreate");
     console.log("ESTADO :>> ", this.name);
     console.log("DOM", this.$el); //Atributo do vue que retorna o root (div pai) do template
   },
   created() {
     // O componente foi criado.
+    // Tem acesso ao estado
+    // Não tem acesso ao template (DOM)
     console.log("created");
     console.log("ESTADO :>> ", this.name);
     console.log("DOM", this.$el);
   },
   beforeMount() {
     // Antes do componente ser montado.
+    // Tem acesso ao estado
+    // Não tem acesso ao template (DOM)
     console.log("beforeMount");
     console.log("ESTADO :>> ", this.name);
     console.log("DOM", this.$el);
   },
   mounted() {
     // O componente foi montado.
+    // Tem acesso ao estado
+    // Tem acesso ao template (DOM)
     console.log("mounted");
     console.log("ESTADO :>> ", this.name);
     console.log("DOM", this.$el);
