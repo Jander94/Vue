@@ -6,13 +6,17 @@
   <!-- <TheWatch /> -->
   <!-- <LifeCycle /> -->
 
-  <TheSlot>
+  <!-- <TheSlot>
     <template v-slot:title> Slots </template>
     <template v-slot:description>
       <div v-html="descriptionSlots"></div>
     </template>
     slot default
-  </TheSlot>
+  </TheSlot> -->
+
+  <ThePropsEmit v-if="showMsg" type="succes" @close="closeMsg">
+    ... enviado com sucesso!
+  </ThePropsEmit>
 </template>
 
 <script>
@@ -22,8 +26,9 @@
 // import TheComputed from "./components/TheComputed.vue";
 // import TheWatch from "./components/TheWatch.vue";
 // import LifeCycle from "./components/LifeCycle.vue";
-import TheSlot from "./components/TheSlot.vue";
+// import TheSlot from "./components/TheSlot.vue";
 import { descriptionSlots } from "./utils/index";
+import ThePropsEmit from "./components/ThePropsEmit.vue";
 
 export default {
   name: "App",
@@ -34,17 +39,25 @@ export default {
     // TheComputed,
     // TheWatch,
     // LifeCycle,
-    TheSlot,
+    // TheSlot,
+    ThePropsEmit,
   },
 
   data() {
     return {
       descriptionSlots,
+      showMsg: true,
     };
   },
 
   mounted() {
     // console.log(this.$el);
+  },
+
+  methods: {
+    closeMsg() {
+      this.showMsg = false;
+    },
   },
 };
 </script>
