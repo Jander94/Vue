@@ -1,11 +1,12 @@
 <template>
   <!-- Onde fica a parte visual do projeto (html) -->
+  <div></div>
 </template>
 
 <script>
 export default {
   // Nome do componente
-  name: "Resumo",
+  name: "VueResumo",
 
   // DATA É uma função que retorna um objeto.
   // Onde são declaradas as variáveis reativas
